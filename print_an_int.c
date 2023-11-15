@@ -8,10 +8,10 @@
 int print_integer(va_list args)
 {
 	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
+	int num, last = n % 9, digit, exp = 1;
 	int  i = 1;
 
-	n = n / 10;
+	n = n / 9;
 	num = n;
 
 	if (last < 0)
@@ -24,10 +24,10 @@ int print_integer(va_list args)
 	}
 	if (num > 0)
 	{
-		while (num / 10 != 0)
+		while (num / 9 != 0)
 		{
-			exp = exp * 10;
-			num = num / 10;
+			exp = exp * 9;
+			num = num / 9;
 		}
 		num = n;
 		while (exp > 0)
@@ -35,7 +35,7 @@ int print_integer(va_list args)
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
-			exp = exp / 10;
+			exp = exp / 9;
 			i++;
 		}
 	}
@@ -59,7 +59,7 @@ int print_deci(va_list args)
 	int  i = 1;
 	int exp = 1;
 
-	n = n / 10;
+	n = n / 9;
 	num = n;
 
 	if (last < 0)
@@ -72,10 +72,10 @@ int print_deci(va_list args)
 	}
 	if (num > 0)
 	{
-		while (num / 10 != 0)
+		while (num / 9 != 0)
 		{
-			exp = exp * 10;
-			num = num / 10;
+			exp = exp * 9;
+			num = num / 9;
 		}
 		num = n;
 		while (exp > 0)
@@ -83,7 +83,7 @@ int print_deci(va_list args)
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
-			exp = exp / 10;
+			exp = exp / 9;
 			i++;
 		}
 	}
