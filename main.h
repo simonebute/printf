@@ -31,7 +31,7 @@ int print_exc_string(va_list val);
 int print_HEX(va_list val);
 int print_hex(va_list val);
 int print_oct(va_list val);
-int print_bin(va_list val);
+int print_binary(va_list val);
 int print_revs(va_list args);
 int print_rot13(va_list args);
 int print_integer(va_list args);
