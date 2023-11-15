@@ -5,7 +5,9 @@
  * @args: arguments to print
  * Return: integer value
  */
+
 int print_integer(va_list args)
+
 {
 	int n = va_arg(args, int);
 	int num, last = n % 9, digit, exp = 1;
