@@ -22,12 +22,12 @@ typedef struct format
 } convert;
 
 int *_strcpy(char *dest, char *src);
-int print_pointer(va_list val);
+int print_pointers(va_list val);
 int print_unsigned(va_list args);
 int print_hex_extra(unsigned long int num);
 int _strlenc(const char *s);
-int print_HEX_extra(unsigned int num);
-int print_exc_string(va_list val);
+int print_HEX_custom(unsigned int num);
+int print_cus_string(va_list val);
 int print_HEXA(va_list val);
 int print_hexa(va_list val);
 int print_oct(va_list val);
